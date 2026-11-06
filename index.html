@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Password Security Hub</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <div class="background"></div>
+
+    <nav>
+        <h2>Password Security Hub</h2>
+        <ul>
+            <li><a href="#checker">Password Checker</a></li>
+            <li><a href="#importance">Why Security Matters</a></li>
+            <li><a href="#avoid">Passwords to Avoid</a></li>
+        </ul>
+    </nav>
+
+    <header>
+        <h1>Protect Your Digital Identity</h1>
+        <p>Learn how to create strong passwords and defend yourself against cyber threats.</p>
+    </header>
+
+    <section id="checker">
+        <h2>Password Strength Checker</h2>
+
+        <input
+            type="password"
+            id="password"
+            placeholder="Enter a password"
+            onkeyup="checkPassword()"
+        >
+
+        <div id="strength-text">Strength: N/A</div>
+
+        <div class="meter">
+            <div id="strength-bar"></div>
+        </div>
+
+        <div id="feedback"></div>
+    </section>
+
+    <section id="importance">
+        <h2>Why Secure Passwords Matter</h2>
+
+        <p>
+            Your password is often the first and only barrier protecting
+            your personal information. Weak passwords can allow attackers
+            to gain access to email accounts, banking information,
+            social media, and private data.
+        </p>
+
+        <p>
+            Cybercriminals frequently use automated password-cracking tools,
+            credential stuffing attacks, and leaked password databases
+            to compromise accounts.
+        </p>
+
+        <p>
+            Creating strong and unique passwords reduces the risk of identity
+            theft, financial loss, and unauthorized access.
+        </p>
+    </section>
+
+    <section id="avoid">
+        <h2>Common Passwords to Avoid</h2>
+
+        <p>These passwords appear in breach databases every year:</p>
+
+        <div class="password-list">
+            <ul>
+                <li>123456</li>
+                <li>password</li>
+                <li>123456789</li>
+                <li>qwerty</li>
+                <li>abc123</li>
+                <li>password123</li>
+                <li>111111</li>
+                <li>admin</li>
+                <li>welcome</li>
+                <li>letmein</li>
+            </ul>
+        </div>
+
+        <h3>Also Avoid:</h3>
+
+        <ul>
+            <li>Using your birthday</li>
+            <li>Using pet names</li>
+            <li>Using the same password everywhere</li>
+            <li>Using only dictionary words</li>
+            <li>Using personal information found online</li>
+        </ul>
+    </section>
+
+    <footer>
+        <p>Cybersecurity Awareness Project | Created by David Roma</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
