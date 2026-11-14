@@ -1,0 +1,152 @@
+<!--
+    This file is the main HTML document for the website.
+
+    HTML (HyperText Markup Language) is the standard language used
+    to create the structure and content of a webpage.
+
+    Think of HTML as the framework or skeleton of a house.
+    It defines what appears on the page, such as headings,
+    paragraphs, buttons, forms, and sections.
+-->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+    <!--
+        The character encoding determines how text is stored and displayed.
+        UTF-8 supports nearly all letters, symbols, and languages.
+    -->
+    <meta charset="UTF-8">
+
+    <!--
+        This helps the website display properly on phones, tablets,
+        and computers by adjusting the page to fit the screen size.
+    -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!--
+        The title appears in the browser tab.
+    -->
+    <title>Password Security Hub</title>
+
+    <!--
+        This connects the HTML page to the CSS file.
+
+        CSS (Cascading Style Sheets) controls the appearance
+        of the website, including colors, spacing, layouts,
+        fonts, and animations.
+    -->
+    <link rel="stylesheet" href="style.css">
+
+</head>
+<body>
+
+    <!--
+        This empty container is used only for the animated background
+        effects that are created in the CSS file.
+
+        The visual styling comes entirely from CSS.
+    -->
+    <div class="background"></div>
+
+    <!--
+        The navigation bar helps users move to different sections
+        of the webpage.
+
+        Navigation links improve usability by allowing visitors
+        to jump directly to important content.
+    -->
+    <nav>
+        <h2>Password Security Hub</h2>
+
+        <!--
+            An unordered list (<ul>) is used to organize navigation links.
+        -->
+        <ul>
+            <!--
+                The # symbol links to an element with a matching id.
+                Clicking this link scrolls the user to the password checker.
+            -->
+            <li><a href="#checker">Password Checker</a></li>
+
+            <!--
+                This link jumps to the section explaining why password
+                security is important.
+            -->
+            <li><a href="#importance">Why Security Matters</a></li>
+
+            <!--
+                This link jumps to the section showing passwords
+                that should be avoided.
+            -->
+            <li><a href="#avoid">Passwords to Avoid</a></li>
+        </ul>
+    </nav>
+
+    <!--
+        The header is the first section visitors see.
+
+        It introduces the purpose of the website and provides
+        a quick overview of the topic.
+    -->
+    <header>
+        <h1>Protect Your Digital Identity</h1>
+        <p>Learn how to create strong passwords and defend yourself against cyber threats.</p>
+    </header>
+
+    <!--
+        This section contains the interactive password checker.
+
+        An "id" is a unique identifier that allows links,
+        CSS styles, and JavaScript code to locate this section.
+    -->
+    <section id="checker">
+
+        <h2>Password Strength Checker</h2>
+
+        <!--
+            This password input field allows users to type a password.
+
+            type="password" hides the characters for privacy.
+
+            onkeyup means the JavaScript function checkPassword()
+            runs each time the user releases a key while typing.
+            This provides instant feedback.
+        -->
+        <input
+            type="password"
+            id="password"
+            placeholder="Enter a password"
+            onkeyup="checkPassword()"
+        >
+
+        <!--
+            This area displays the current password strength level.
+        -->
+        <div id="strength-text">Strength: N/A</div>
+
+        <!--
+            This is the outer container for the strength meter.
+
+            A container is an element that holds other elements.
+        -->
+        <div class="meter">
+
+            <!--
+                This inner bar grows or shrinks based on the password score.
+
+                JavaScript updates its width and color.
+            -->
+            <div id="strength-bar"></div>
+        </div>
+
+        <!--
+            This area displays suggestions to help users improve
+            their passwords.
+        -->
+        <div id="feedback"></div>
+    </section>
+
+    <!--
+        This educational
